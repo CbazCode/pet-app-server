@@ -1,4 +1,5 @@
 import * as express from "express";
+import * as cors from "cors";
 
 // Connection to MongoDB
 import { connectDB } from "./config/db";
