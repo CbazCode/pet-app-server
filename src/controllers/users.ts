@@ -7,7 +7,7 @@ import UserModel from "../models/user";
 // Config
 import { SECRET_WORD } from "../config/constants";
 
-const secret = SECRET_WORD ?? "";
+const secret = SECRET_WORD ?? "XYWSI123456789";
 
 export const signIn = async (req: Request, res: Response) => {
   const { email, password } = req.body;
@@ -31,6 +31,9 @@ export const signIn = async (req: Request, res: Response) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
       expiresIn: "1h"
     });
+
+    console.log({ result: oldUser });
+    console.log({ token });
 
     res.status(200).json({ result: oldUser, token });
   } catch (error) {
@@ -60,6 +63,9 @@ export const signUp = async (req: Request, res: Response) => {
     const token = jwt.sign({ email: result.email, id: result._id }, secret, {
       expiresIn: "1h"
     });
+
+    console.log({ result });
+    console.log({ token });
 
     res.status(201).json({ result, token });
   } catch (error) {
