@@ -23,9 +23,8 @@
   },
   "scripts": {
     "start": "node dist/index.js",
-    "postinstall": "tsc",
     "dev": "nodemon src/index.ts",
-    "check-types": "tsc",
+    "build": "tsc",
     "lint:staged": "eslint --ignore-path .gitignore --ext .js,jsx,.ts,.tsx",
     "lint": "yarn lint:staged .",
     "check-format": "yarn prettier --list-different",

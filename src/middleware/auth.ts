@@ -1,6 +1,6 @@
 import * as jwt from "jsonwebtoken";
 import { Request, Response, NextFunction } from "express";
-import { JwtPayload } from "@interfaces/global.interfaces";
+import { JwtPayload } from "../interfaces/global.interfaces";
 import { SECRET_WORD } from "../config/constants";
 
 const secret = SECRET_WORD ?? "";

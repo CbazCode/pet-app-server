@@ -1,17 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "paths": {
-      "@config/*": ["config/*"],
-      "@containers/*": ["containers/*"],
-      "@interfaces/*": ["interfaces/*"],
-      "@utils/*": ["utils/*"]
-    },
     "module": "commonjs",
     "allowSyntheticDefaultImports": true,
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
-    "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true,
