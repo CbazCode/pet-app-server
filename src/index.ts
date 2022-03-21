@@ -1,5 +1,6 @@
 import * as express from "express";
 import * as cors from "cors";
+import * as dotenv from "dotenv";
 
 // Connection to MongoDB
 import { connectDB } from "./config/db";
@@ -9,6 +10,7 @@ import petsRoutes from "./routes/pets";
 // Config
 import { PORT } from "./config/constants";
 
+dotenv.config();
 connectDB();
 
 const app = express();
