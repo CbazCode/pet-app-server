@@ -32,9 +32,6 @@ export const signIn = async (req: Request, res: Response) => {
       expiresIn: "1h"
     });
 
-    console.log({ result: oldUser });
-    console.log({ token });
-
     res.status(200).json({ result: oldUser, token });
   } catch (error) {
     res.status(500).json({ error });
@@ -63,9 +60,6 @@ export const signUp = async (req: Request, res: Response) => {
     const token = jwt.sign({ email: result.email, id: result._id }, secret, {
       expiresIn: "1h"
     });
-
-    console.log({ result });
-    console.log({ token });
 
     res.status(201).json({ result, token });
   } catch (error) {
