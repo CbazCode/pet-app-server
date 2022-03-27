@@ -29,7 +29,8 @@ const corsOptions = {
     "http://127.0.0.1:3000",
     "https://pet-app-client-ghx5yr50g-cbazcode.vercel.app"
   ],
-  methods: "GET, OPTIONS,POST, PUT, DELETE"
+  methods: "GET, OPTIONS,POST, PUT, DELETE",
+  preflightContinue: false
 };
 
 app.use(express.urlencoded({ extended: true }));
