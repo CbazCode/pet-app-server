@@ -8,7 +8,7 @@ export const createPet = async (req: Request, res: Response) => {
 
   const newPostMessage = new PetModel({
     ...post,
-    creator: userId,
+    owner: userId,
     createdAt: new Date().toISOString()
   });
 

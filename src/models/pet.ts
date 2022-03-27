@@ -7,6 +7,7 @@ const petSchema = new Schema({
   breed: { type: String, required: true, minlength: 2 },
   gender: { type: String, required: true, length: 1 },
   birthday: { type: Date, required: true },
+  owner: { type: String },
   file: { type: String, required: true }
 });
 

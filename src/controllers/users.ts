@@ -7,7 +7,7 @@ import UserModel from "../models/user";
 // Config
 import { SECRET_WORD } from "../config/constants";
 
-const secret = SECRET_WORD ?? "XYWSI123456789";
+const secret = SECRET_WORD ?? "";
 
 export const signIn = async (req: Request, res: Response) => {
   const { email, password } = req.body;
