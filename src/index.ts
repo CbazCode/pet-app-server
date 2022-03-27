@@ -27,7 +27,7 @@ const corsOptions = {
   origin: [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://pet-app-client-ghx5yr50g-cbazcode.vercel.app"
+    "https://pet-app-client-murex.vercel.app"
   ],
   methods: "GET, OPTIONS,POST, PUT, DELETE",
   preflightContinue: false
