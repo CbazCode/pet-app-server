@@ -29,7 +29,7 @@ const corsOptions = {
     "http://127.0.0.1:3000",
     "https://pet-app-client-murex.vercel.app"
   ],
-  methods: "GET, OPTIONS,POST, PUT, DELETE",
+  methods: "GET, OPTIONS, POST, PUT, DELETE",
   preflightContinue: false
 };
 
