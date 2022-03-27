@@ -24,13 +24,17 @@ const corsOptions = {
     "X-Access-Token",
     "Authorization"
   ],
-  origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
+  origin: [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://pet-app-client-ghx5yr50g-cbazcode.vercel.app"
+  ],
   methods: "GET, OPTIONS,POST, PUT, DELETE"
 };
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/pets", petsRoutes);
