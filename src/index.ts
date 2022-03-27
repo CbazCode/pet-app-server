@@ -41,7 +41,7 @@ app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/pets", petsRoutes);
 
 app.get("/", (req, res) => {
-  res.send("The sedulous hyena ate the antelope!");
+  res.send("The sedulous hyena ate the antelopee!");
 });
 
 app.listen(PORT, () => {
