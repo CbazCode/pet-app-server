@@ -7,6 +7,7 @@ import { connectDB } from "./config/db";
 // Routes
 import userRoutes from "./routes/users";
 import petsRoutes from "./routes/pets";
+import appointmentsRoutes from "./routes/appointment";
 // Config
 import { PORT } from "./config/constants";
 
@@ -39,6 +40,7 @@ app.use(cors(corsOptions));
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/pets", petsRoutes);
+app.use("/api/v1/appointments", appointmentsRoutes);
 
 app.get("/", (req, res) => {
   res.send("The sedulous hyena ate the antelopee!");
